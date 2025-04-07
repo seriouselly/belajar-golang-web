@@ -59,5 +59,5 @@ func ProductHandler(w http.ResponseWriter, r *http.Request) {
 		"content": idNumb,
 	}
 
-	helpers.LoadTemplate(w, "product.html", data)
+	helpers.LoadTemplate(w, "./pages/product.html", data)
 }

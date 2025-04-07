@@ -1,14 +1,18 @@
+{{define "layout"}}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Product</title>
+    <title>Web Golang</title>
   </head>
   <body>
-    <main>
-      <h1 class="text-blue-500 text-[30px]">Product ke- {{.content}}</h1>
-    </main>
+    <h1 class="text-[10px] text-gray-500">header</h1>
+    <main>{{template "content" .}}</main>
+    <footer class="text-[10px] text-gray-500">
+      &copy; Selly Supriyatin 2025
+    </footer>
   </body>
 </html>
+{{end}}

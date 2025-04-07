@@ -8,7 +8,7 @@ import (
 )
 
 func LoadTemplate(w http.ResponseWriter, tmpl string, data interface{}) {
-	tmplPath, err := template.ParseFiles(path.Join("views", tmpl))
+	tmplPath, err := template.ParseFiles(path.Join("views", tmpl), path.Join("views/layout", "layout.html"))
 	if err != nil {
 		log.Println(err.Error())
 		http.Error(w, "Error is happening, keep calm", http.StatusInternalServerError)
